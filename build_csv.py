@@ -12,14 +12,15 @@ from os import listdir
 if __name__== "__main__":
 	# output csv file where we save paths to out images
 	write_file= open("data.csv", "w")
-	data_dir= "/home/suryateja/Documents/GitHub/FaceRecognizer/output_images"
+	data_dir= "C:/Users/jaraa/OneDrive/Documentos/GitHub/FaceRecognizer/sorted_output_images"
 
 	# folders for each subject in root images folder
 	subjects= listdir(data_dir)
-	#print(subjects)
+	print(subjects)
 
 	for i in range(len(subjects)):
-		# all pictures in a particular folder/subject
+        # all pictures in a particular folder/subject
+		print(subjects[i])
 		photos= listdir(data_dir+ "/"+ subjects[i])
 		for photo in photos:
 			out_line= data_dir+ "/"+ subjects[i]+ "/"+ photo+ ";"+ str(i)
